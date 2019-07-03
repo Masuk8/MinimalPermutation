@@ -11,21 +11,19 @@ def min_dot(a, b):
     c = 0
     a.sort(reverse=True)
     b.sort()
+    d = 0
     while len(a) > 0:
         c = a[0] * b[0]
+        d += c
         a.remove(max(a))
         b.remove(min(b))
-        return c
-    print(c)
+        print(d)
+        return d
 
 
 "a.remove([0])"
 
 min_dot(a, b)
-
-print(a)
-print(b)
-
 
 
 "a.remove(max(a))"
